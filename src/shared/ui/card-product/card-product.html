@@ -1,0 +1,17 @@
+<mat-card class="product_card_container" appearance="outlined">
+  <a [routerLink]="['/product', cardProduct.id]">
+    <img [src]="cardProduct.image" alt="cardProduct image" class="product_photo">
+  </a>
+  <mat-card-title class="title">{{ cardProduct.title }}</mat-card-title>
+  <mat-card-content class="info_wrapper">
+    <div class="info">
+      <span>Цена:</span>
+      <span>{{ cardProduct.price }}</span>
+    </div>
+    <div class="info">
+      <span>Категория:</span>
+      <span>{{ cardProduct.category }}</span>
+    </div>
+    <p class="description">{{ cardProduct.description }}</p>
+  </mat-card-content>
+</mat-card>

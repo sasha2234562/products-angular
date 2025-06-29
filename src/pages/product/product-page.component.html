@@ -1,0 +1,19 @@
+<main class="container">
+  <div class="logo_wrapper">
+    <h1 class="title">{{ product.title }}</h1>
+    <div class="info_container">
+      <img [src]="product.image" [alt]="product.title" class="logo"/>
+      <div class="info_wrapper">
+        <div class="info">
+          <span>Цена:</span>
+          <span>{{ product.price }}</span>
+        </div>
+        <div class="info">
+          <span>Категория:</span>
+          <span>{{ product.category }}</span>
+        </div>
+      </div>
+    </div>
+    <p class="description">{{ product.description }}</p>
+  </div>
+</main>

@@ -1,0 +1,22 @@
+<main class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form_control">
+    <mat-form-field class="mat_form_field">
+      <input matInput placeholder="Поиск" formControlName="search" class="input_search">
+    </mat-form-field>
+    <button matButton="filled" type="submit" class="btn_submit">Фильтровать</button>
+  </form>
+  <section class="cards_wrapper">
+    @if (products.length === 0){
+      <mat-spinner class="spinner"></mat-spinner>
+    } @else if(productsFilter.length > 0){
+      @for (item of productsFilter; track item.id) {
+        <app-card-product [cardProduct]="item"></app-card-product>
+      }
+    } @else {
+      <div class="reset_container">
+        <h4>Продукты не найдены</h4>
+        <button matButton="filled" class="btn_reset" (click)="resetSearch()">Сбросить</button>
+      </div>
+    }
+  </section>
+</main>

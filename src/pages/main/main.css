@@ -1,0 +1,46 @@
+.cards_wrapper{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+}
+.container{
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.input_search{
+  width: 100%;
+}
+.form_control{
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+}
+.mat_form_field{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.btn_submit{
+  border-radius: 6px;
+  height: 100%;
+  width: 200px;
+  padding: 20px;
+}
+.btn_reset{
+  border-radius: 6px;
+  padding: 16px;
+}
+.reset_container{
+  width: fit-content;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.spinner{
+  margin: 0 auto;
+}
