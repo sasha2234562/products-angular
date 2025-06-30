@@ -1,16 +1,19 @@
 <main class="container">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form_control">
+  <form class="form_control" [formGroup]="form">
+    <div class="count">
+      <span>Count: </span>
+      <span> {{count}}</span>
+    </div>
     <mat-form-field class="mat_form_field">
-      <input matInput placeholder="Поиск" formControlName="search" class="input_search">
+      <input matInput placeholder="Поиск" formControlName="search" class="input_search" [formControl]="searchInput">
     </mat-form-field>
-    <button matButton="filled" type="submit" class="btn_submit">Фильтровать</button>
   </form>
   <section class="cards_wrapper">
-    @if (products.length === 0){
+    @if (products.length === 0) {
       <mat-spinner class="spinner"></mat-spinner>
-    } @else if(productsFilter.length > 0){
+    } @else if (productsFilter.length > 0) {
       @for (item of productsFilter; track item.id) {
-        <app-card-product [cardProduct]="item"></app-card-product>
+        <app-card-product [cardProduct]="item" (changeCheckboxCard)="changeCheckboxCard($event)"></app-card-product>
       }
     } @else {
       <div class="reset_container">

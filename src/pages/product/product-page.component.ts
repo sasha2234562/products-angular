@@ -1,6 +1,6 @@
 import {ChangeDetectorRef, Component, inject, OnInit} from '@angular/core';
 import {ProductService} from './product.service';
-import {Product} from '../main/service';
+import {Product} from '../products/service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({

@@ -33,8 +33,13 @@
   box-sizing: border-box;
   font-family: Jost, sans-serif;
 }
+
 a {
   text-decoration: none;
+  color: inherit;
+}
+ul, li{
+  list-style: none;
 }
 button {
   background-color: transparent;
@@ -42,5 +47,13 @@ button {
   cursor: pointer;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  max-width: 1440px;
+  padding: 8px;
+}

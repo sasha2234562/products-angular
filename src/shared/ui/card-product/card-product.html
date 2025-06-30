@@ -1,4 +1,5 @@
 <mat-card class="product_card_container" appearance="outlined">
+  <input type="checkbox" class="checkbox" (change)="changeCheckbox($event)">
   <a [routerLink]="['/product', cardProduct.id]">
     <img [src]="cardProduct.image" alt="cardProduct image" class="product_photo">
   </a>

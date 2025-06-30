@@ -1,0 +1,10 @@
+<a [routerLink]="['/user', user.id]">
+  <div class="container">
+    <h3 class="name">{{ user.name.lastname }} {{ user.name.firstname }}</h3>
+    <div>
+      <p class="info"><span>Почта:</span> <span>{{ user.email }}</span></p>
+      <p class="info"><span>Город:</span> <span>{{ user.address.city }}</span></p>
+      <p class="info"><span>Телефон:</span> <span>{{ user.phone }}</span></p>
+    </div>
+  </div>
+</a>

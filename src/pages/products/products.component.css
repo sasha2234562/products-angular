@@ -44,3 +44,12 @@
 .spinner{
   margin: 0 auto;
 }
+.count{
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid purple;
+  width: fit-content;
+  text-wrap: wrap;
+  display: flex;
+  height: fit-content;
+}
